@@ -8,10 +8,15 @@ export default function Coin() {
   const EventSubmit = async (e) => {
     e.preventDefault();
 
+   try{
     const response = await fetch(api);
     const data = await response.json();
-    setItem(data.coins);
+    setItem(data);
     console.log(data);
+   }
+   catch(err){
+    console.log(err)
+   }
   };
 
   const input = (e) => setQuery(e.target.value);
@@ -19,6 +24,7 @@ export default function Coin() {
   return (
     <div>
       <form onSubmit={EventSubmit}>
+        <label>serch for a new crybto</label>
         <input type="text" placeholder="enter your coin" onChange={input} />
         <button>submit </button>
       </form>
@@ -26,7 +32,8 @@ export default function Coin() {
       {/* {item.map(items => {
         return <pre>{JSON.stringify(items.query)}</pre>
       })} */}
-      <h1>coin : {item.coins}</h1>
+
+      <h1>coin : {item.id}</h1>
     </div>
   );
 }
