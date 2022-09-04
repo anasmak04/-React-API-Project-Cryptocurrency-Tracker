@@ -23,15 +23,14 @@ export default function Coin() {
   return (
     <div>
       <form onSubmit={EventSubmit}>
-        <label>serch for a new crybto</label>
-        <input type="text" placeholder="enter your coin" onChange={input} />
+        <input type="text" placeholder="serch for a new crybto" onChange={input} />
         <button>submit </button>
       </form>
 
       {item.map((items) => {
         return (
           <>
-            <table>
+            <table key={items.id}>
               <tr>
                 <th>name</th>
                 <th>image</th>
@@ -44,7 +43,7 @@ export default function Coin() {
                   {" "}
                   <img src={items.large} alt="img" />
                 </td>
-                <td>{items.symbol}</td>
+                <td>{items.market_cap_rank}</td>
                 <td>{items.symbol}</td>
               </tr>
             </table>

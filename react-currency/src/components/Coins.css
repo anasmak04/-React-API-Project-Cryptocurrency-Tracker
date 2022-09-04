@@ -6,17 +6,26 @@ li{
     list-style: none;
 }
 
+*{
+
+    font-family: "Open Sans", "Arial", snas-serif;
+}
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     margin-top: 60px;
   }
-  
+  tr{
+    width: 40px;
+
+  }
   td, th {
     border: 1px solid #dddddd;
     text-align: center;
     padding: 8px;
+    width: 40px;
   }
   
   tr:nth-child(even) {
@@ -24,4 +33,50 @@ table {
   }
 
 
-  
+  form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input{
+    width: 500px;
+    height: 80px;
+    border: none;
+    padding-left: 30px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 41px;
+    border-bottom-right-radius: 41px;
+    border-top-left-radius: 41px;
+    border-top-right-radius: 0;
+    box-shadow: 0 17px 40px 0 rgba(137, 144, 151, 0.7);    font-size: 23px;
+  }
+
+  button{
+    width: 110px;
+    height: 80px;
+    border: none;
+    padding-left: 30px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 41px;
+    border-bottom-right-radius: 41px;
+    border-top-left-radius: 41px;
+    border-top-right-radius: 0;
+    box-shadow: 0 17px 40px 0 rgba(137, 144, 151, 0.7);
+    cursor: pointer;
+    padding-right: 12px;
+    font-size: 14px;
+  }
+
+  input:focus{
+    outline: none;
+  }
+
+  button:hover{
+    background-color: grey;
+    color: white;
+  }
+
+  form{
+    margin-top: 30pxc;
+  }
